@@ -13,3 +13,18 @@ E:\Cong nghe phan mem\Lab02\Lab02\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieA
 E:\Cong nghe phan mem\Lab02\Lab02\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Form3.resources
 E:\Cong nghe phan mem\Lab02\Lab02\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Detail.resources
 E:\Cong nghe phan mem\Lab02\Lab02\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.ManagementCustomer.resources
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\bin\Debug\DemoMovieApp.exe.config
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\bin\Debug\DemoMovieApp.exe
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\bin\Debug\DemoMovieApp.pdb
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.csproj.AssemblyReference.cache
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.csproj.SuggestedBindingRedirects.cache
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Detail.resources
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Form1.resources
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Form2.resources
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Form3.resources
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.ManagementCustomer.resources
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Properties.Resources.resources
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.csproj.GenerateResource.cache
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.csproj.CoreCompileInputs.cache
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.exe
+D:\2022-2023(1)\502045 - CNPM\ReportCinema\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.pdb
