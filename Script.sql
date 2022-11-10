@@ -14,6 +14,7 @@ CREATE TABLE BapNuoc
 CREATE TABLE KhachHang
 (
   maKhachHang CHAR(10) NOT NULL,
+  matKhau CHAR(10) NOT NULL,
   tenKhachHang NVARCHAR(100) NOT NULL,
   ngaySinh DATE NOT NULL,
   soDienThoai VARCHAR(100) NOT NULL,
@@ -24,18 +25,17 @@ CREATE TABLE KhachHang
 
 CREATE TABLE Admin
 (
-  maAdmin CHAR(10) NOT NULL,
+  taiKhoan CHAR(10) NOT NULL,
+  matKhau CHAR(10) NOT NULL,
   chucVu NVARCHAR(50) NOT NULL,
-  maKhachHang CHAR(10) NOT NULL,
-  PRIMARY KEY (maAdmin),
-  FOREIGN KEY (maKhachHang) REFERENCES KhachHang(maKhachHang)
+  PRIMARY KEY (taiKhoan),
 );
 
 CREATE TABLE Phim
 (
   maPhim CHAR(10) NOT NULL,
   tenPhim NVARCHAR(100) NOT NULL,
-  theLoai VARCHAR(100) NOT NULL,
+  theLoai NVARCHAR(100) NOT NULL,
   PRIMARY KEY (maPhim)
 );
 
@@ -80,6 +80,7 @@ CREATE TABLE SuatChieu
   maSuatChieu CHAR(10) NOT NULL,
   maPhim CHAR(10) NOT NULL,
   maPhongChieu CHAR(10) NOT NULL,
+  gioChieu TIME NOT NULL,
   PRIMARY KEY (maSuatChieu),
   FOREIGN KEY (maPhim) REFERENCES Phim(maPhim),
   FOREIGN KEY (maPhongChieu) REFERENCES PhongChieu(maPhongChieu)
@@ -141,13 +142,12 @@ INSERT INTO PhongChieu(maPhongChieu, soPhongChieu, maRap) VALUES ('PC01R05', '01
 INSERT INTO PhongChieu(maPhongChieu, soPhongChieu, maRap) VALUES ('PC02R05', '02', 'R05')
 SELECT * FROM PhongChieu
 
-INSERT INTO KhachHang(maKhachHang, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH01', N'Trần Tấn Hưng', '0123456789', CAST('2022-11-10T12:00:00.000' AS DateTime), N'Hồ Chí Minh', 0);
-INSERT INTO KhachHang(maKhachHang, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH02', N'Trần Đăng Quang', '0123456789', CAST('2022-11-20T12:00:00.000' AS DateTime), N'Hồ Chí Minh', 0);
-INSERT INTO KhachHang(maKhachHang, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH03', N'Phạm Thái Học', '0123456789', CAST('2022-11-20T12:00:00.000' AS DateTime), N'Hồ Chí Minh', 0);
-INSERT INTO KhachHang(maKhachHang, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH04', N'Phạm Nguyễn', '0123456789', CAST('2022-11-20T12:00:00.000' AS DateTime), N'Hồ Chí Minh', 0);
-INSERT INTO KhachHang(maKhachHang, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH05', N'Học Thứ Hai', '0123456789', CAST('2022-11-20T12:00:00.000' AS DateTime), N'Đà Nẵng', 0);
+INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH01', 'tanhung', N'Trần Tấn Hưng', '0123456781', '2022-11-10', N'Hồ Chí Minh', 0);
+INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH02', 'dangquang', N'Trần Đăng Quang', '0123456782', '2022-11-20', N'Hồ Chí Minh', 0);
+INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH03', 'thaihoc', N'Phạm Thái Học', '0123456783', '2022-11-20', N'Hồ Chí Minh', 0);
+INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH04', 'nguyen', N'Phạm Nguyễn', '0123456784', '2022-11-20', N'Hồ Chí Minh', 0);
+INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang ,soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH05', 'thuhai', N'Học Thứ Hai', '0123456785', '2022-11-20', N'Đà Nẵng', 0);
 SELECT * FROM KhachHang
-DELETE FROM KhachHang
 
 INSERT INTO Phim(maPhim, tenPhim, theLoai) VALUES ('P01', 'FORREST GUMP', N'Tâm Lý')
 INSERT INTO Phim(maPhim, tenPhim, theLoai) VALUES ('P02', 'HEM CUT', N'Hài')
@@ -159,21 +159,33 @@ INSERT INTO Phim(maPhim, tenPhim, theLoai) VALUES ('P07', 'ONE PIECE FILM RED', 
 INSERT INTO Phim(maPhim, tenPhim, theLoai) VALUES ('P08', 'IRON MAN', N'Khoa học viễn tưởng')
 INSERT INTO Phim(maPhim, tenPhim, theLoai) VALUES ('P09', 'NHA BA NU', N'Gia đình')
 INSERT INTO Phim(maPhim, tenPhim, theLoai) VALUES ('P010', 'BO GIA', N'Gia đình')
+select * from Phim
 
 INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV01', N'1 bắp lớn và 2 nước lớn', 105000)
 INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'1 bặp lớn và 2 nước lớn', 85000)
-INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'1 bắp vừa và 1 nước lớn', 85000)
-INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'combo Onepice', 199000)
-INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'1 bắp vị ngọt', 59000)
-INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'1 bắp vị mặn', 59000)
-INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'1 bắp vị caramel', 74000)
-INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'1 bắp vị phô mai', 74000)
-INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'1 bắp vị chocolate', 74000)
-INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'Nước ngọt tươi', 38000)
-INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV02', N'Trà sữa đặc biệt', 35000)
+INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV03', N'1 bắp vừa và 1 nước lớn', 85000)
+INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV04', N'combo Onepice', 199000)
+INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV05', N'1 bắp vị ngọt', 59000)
+INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV06', N'1 bắp vị mặn', 59000)
+INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV07', N'1 bắp vị caramel', 74000)
+INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV08', N'1 bắp vị phô mai', 74000)
+INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV09', N'1 bắp vị chocolate', 74000)
+INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV10', N'Nước ngọt tươi', 38000)
+INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV11', N'Trà sữa đặc biệt', 35000)
 
+INSERT INTO Admin(taiKhoan, matKhau, chucVu) VALUES ('admin', 'admin', N'Quản lí')
 
-INSERT INTO SuatChieu(maSuatChieu,maPhongChieu, maPhim, ngayChieu, donGia) VALUES ('SC01')
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC01', 'PC01R01', 'P01', '2022-11-20', 80000, '21:00');
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC02', 'PC02R01', 'P02', '2022-11-20',80000, '20:00')
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC03', 'PC01R02', 'P03', '2022-11-20', 80000, '20:00')
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC04', 'PC02R02', 'P04', '2022-11-20', 80000, '21:00')
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC05', 'PC01R03', 'P05', '2022-11-20', 80000, '20:00')
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC06', 'PC02R03', 'P06', '2022-11-20', 80000, '21:00')
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC07', 'PC01R04', 'P07', '2022-11-20', 80000, '20:00')
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC08', 'PC02R04', 'P08', '2022-11-20', 80000, '21:00')
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC09', 'PC01R05', 'P09', '2022-11-20', 80000, '20:00')
+INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC10', 'PC02R05', 'P09', '2022-11-20', 80000, '21:00')
+select * from SuatChieu
 
 --UPDATE TICH DIEM TRONG BANG KHACH HANG
 -- TINH TONG TIEN
