@@ -1,4 +1,8 @@
-﻿CREATE DATABASE CINEMA
+﻿USE master
+GO
+DROP DATABASE CINEMA
+GO
+CREATE DATABASE CINEMA
 GO
 USE CINEMA
 GO
@@ -13,7 +17,7 @@ CREATE TABLE BapNuoc
 
 CREATE TABLE KhachHang
 (
-  maKhachHang CHAR(10) NOT NULL,
+  maKhachHang INT IDENTITY(1,1) NOT NULL,
   matKhau CHAR(10) NOT NULL,
   tenKhachHang NVARCHAR(100) NOT NULL,
   ngaySinh DATE NOT NULL,
@@ -57,7 +61,7 @@ CREATE TABLE Rap
 
 CREATE TABLE DanhGia
 (
-  maKhachHang CHAR(10) NOT NULL,
+  maKhachHang INT,
   maPhim CHAR(10) NOT NULL,
   PRIMARY KEY (maKhachHang, maPhim),
   FOREIGN KEY (maKhachHang) REFERENCES KhachHang(maKhachHang),
@@ -109,7 +113,7 @@ CREATE TABLE Ve
 
 CREATE TABLE LichSu
 (
-  maKhachHang CHAR(10) NOT NULL,
+  maKhachHang INT,
   maHoaDon CHAR(10) NOT NULL,
   PRIMARY KEY (maKhachHang, maHoaDon),
   FOREIGN KEY (maKhachHang) REFERENCES KhachHang(maKhachHang),
@@ -142,11 +146,11 @@ INSERT INTO PhongChieu(maPhongChieu, soPhongChieu, maRap) VALUES ('PC01R05', '01
 INSERT INTO PhongChieu(maPhongChieu, soPhongChieu, maRap) VALUES ('PC02R05', '02', 'R05')
 SELECT * FROM PhongChieu
 
-INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH01', 'tanhung', N'Trần Tấn Hưng', '0123456781', '2022-11-10', N'Hồ Chí Minh', 0);
-INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH02', 'dangquang', N'Trần Đăng Quang', '0123456782', '2022-11-20', N'Hồ Chí Minh', 0);
-INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH03', 'thaihoc', N'Phạm Thái Học', '0123456783', '2022-11-20', N'Hồ Chí Minh', 0);
-INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH04', 'nguyen', N'Phạm Nguyễn', '0123456784', '2022-11-20', N'Hồ Chí Minh', 0);
-INSERT INTO KhachHang(maKhachHang, matKhau, tenKhachHang ,soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('KH05', 'thuhai', N'Học Thứ Hai', '0123456785', '2022-11-20', N'Đà Nẵng', 0);
+INSERT INTO KhachHang(matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('tanhung', N'Trần Tấn Hưng', '0123456781', '2022-11-10', N'Hồ Chí Minh', 0);
+INSERT INTO KhachHang( matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('dangquang', N'Trần Đăng Quang', '0123456782', '2022-11-20', N'Hồ Chí Minh', 0);
+INSERT INTO KhachHang( matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('thaihoc', N'Phạm Thái Học', '0123456783', '2022-11-20', N'Hồ Chí Minh', 0);
+INSERT INTO KhachHang( matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('nguyen', N'Phạm Nguyễn', '0123456784', '2022-11-20', N'Hồ Chí Minh', 0);
+INSERT INTO KhachHang( matKhau, tenKhachHang ,soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES ('thuhai', N'Học Thứ Hai', '0123456785', '2022-11-20', N'Đà Nẵng', 0);
 SELECT * FROM KhachHang
 
 INSERT INTO Phim(maPhim, tenPhim, theLoai) VALUES ('P01', 'FORREST GUMP', N'Tâm Lý')

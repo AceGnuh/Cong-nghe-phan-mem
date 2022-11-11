@@ -11,7 +11,12 @@ namespace DemoMovieApp.DAO
     class LoginDAO
     {
         private static LoginDAO _instance;
-        
+        private static Connection connection;
+
+        public LoginDAO()
+        {
+            connection = new Connection();
+        }
         public static LoginDAO Instance()
         {
             if (_instance == null)
@@ -24,7 +29,7 @@ namespace DemoMovieApp.DAO
 
         public bool validateAccount(String username, String password)
         {
-            Connection connection = new Connection();
+            
             connection.openConnection();
 
             try

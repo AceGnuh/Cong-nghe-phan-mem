@@ -44,3 +44,4 @@ C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMov
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.DetailForm.resources
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.MainForm.resources
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.SearchForm.resources
+C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.SignupForm.resources
