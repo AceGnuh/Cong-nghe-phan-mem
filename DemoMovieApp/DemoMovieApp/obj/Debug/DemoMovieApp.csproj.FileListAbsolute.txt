@@ -33,10 +33,7 @@ C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMov
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\bin\Debug\DemoMovieApp.pdb
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.csproj.AssemblyReference.cache
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.csproj.SuggestedBindingRedirects.cache
-C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Detail.resources
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Form1.resources
-C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Form2.resources
-C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Form3.resources
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.LoginForm.resources
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.ManagementCustomer.resources
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.Properties.Resources.resources
@@ -44,3 +41,6 @@ C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMov
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.csproj.CoreCompileInputs.cache
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.exe
 C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.pdb
+C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.DetailForm.resources
+C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.MainForm.resources
+C:\Users\Admin\OneDrive\Documents\GitHub\Cong-nghe-phan-mem\DemoMovieApp\DemoMovieApp\obj\Debug\DemoMovieApp.SearchForm.resources

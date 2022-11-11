@@ -13,11 +13,10 @@ namespace DemoMovieApp
 {
     public partial class LoginForm : Form
     {
-        private LoginDAO loginDAO;
         public LoginForm()
         {
             InitializeComponent();
-            loginDAO = new LoginDAO();
+            this.AcceptButton = btnLogin;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -30,7 +29,7 @@ namespace DemoMovieApp
                 MessageBox.Show("Please enter both username and password");
             }
 
-            if(loginDAO.validateAccount(username, password))
+            if(LoginDAO.Instance().validateAccount(username, password))
             {
                 MainForm form2 = new MainForm();
                 this.Hide();

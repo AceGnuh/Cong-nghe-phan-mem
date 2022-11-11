@@ -10,17 +10,16 @@ namespace DemoMovieApp.DAO
 {
     class LoginDAO
     {
-        private static LoginDAO instance;
+        private static LoginDAO _instance;
         
-        public static LoginDAO Instance
+        public static LoginDAO Instance()
         {
-            get
+            if (_instance == null)
             {
-                if (instance == null)
-                    instance = new LoginDAO();
-                return instance;
+                _instance = new LoginDAO();
             }
-            private set => instance = value;
+            return _instance;
+            
         }
 
         public bool validateAccount(String username, String password)
