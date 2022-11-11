@@ -26,5 +26,42 @@ namespace DemoMovieApp
         {
 
         }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            String name = tbName.Text.ToString();
+            String phone = tbPhone.Text.ToString();
+            String password = tbPassword.Text.ToString();
+            String birday = tbBirthday.Text.ToString();
+            String address = tbAddress.Text.ToString();
+
+            if(name == "")
+            {
+                MessageBox.Show("Please enter your name");
+                return;
+            }
+            if (phone == "")
+            {
+                MessageBox.Show("Please enter your phone");
+                return;
+            }
+            if (password == "")
+            {
+                MessageBox.Show("Please enter your password");
+                return;
+            }
+            if (birday == "")
+            {
+                MessageBox.Show("Please enter your birthday");
+                return;
+            }
+            if (address == "")
+            {
+                MessageBox.Show("Please enter your address");
+                return;
+            }
+
+
+        }
     }
 }
