@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace DemoMovieApp
 {
-    public partial class Form2 : Form
+    public partial class MainForm : Form
     {
-        public Form2()
+        public MainForm()
         {
             InitializeComponent();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            SearchForm form3 = new SearchForm();
             form3.ShowDialog();
         }
 
@@ -30,8 +30,17 @@ namespace DemoMovieApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Detail detail = new Detail();
+            DetailForm detail = new DetailForm();
             detail.Show();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void btnExitProgram_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

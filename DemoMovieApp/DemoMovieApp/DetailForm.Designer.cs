@@ -1,6 +1,6 @@
 ﻿namespace DemoMovieApp
 {
-    partial class Detail
+    partial class DetailForm
     {
         /// <summary>
         /// Required designer variable.

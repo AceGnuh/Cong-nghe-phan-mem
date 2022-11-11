@@ -32,7 +32,7 @@ namespace DemoMovieApp
             String code = textBox1.Text.ToString();
             if(code == "abcxyz")
             {
-                Form2 form2 = new Form2();
+                MainForm form2 = new MainForm();
                 form2.Show();
             }
         }

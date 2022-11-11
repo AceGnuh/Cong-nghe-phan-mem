@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace DemoMovieApp
 {
-    public partial class Detail : Form
+    public partial class DetailForm : Form
     {
-        public Detail()
+        public DetailForm()
         {
             InitializeComponent();
         }
