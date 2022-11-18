@@ -17,6 +17,8 @@ namespace DemoMovieApp
         {
             InitializeComponent();
             this.AcceptButton = btnLogin;
+
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -44,7 +46,11 @@ namespace DemoMovieApp
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            string hexColor = "#CAF0F8";
 
+            Color myColor = System.Drawing.ColorTranslator.FromHtml(hexColor);
+
+            this.BackColor = myColor;
         }
 
         private void label4_Click(object sender, EventArgs e)

@@ -59,7 +59,6 @@
             this.tbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPhone.Location = new System.Drawing.Point(417, 195);
             this.tbPhone.Name = "tbPhone";
-            this.tbPhone.PasswordChar = '*';
             this.tbPhone.Size = new System.Drawing.Size(336, 38);
             this.tbPhone.TabIndex = 10;
             // 
@@ -108,7 +107,6 @@
             this.tbBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbBirthday.Location = new System.Drawing.Point(417, 335);
             this.tbBirthday.Name = "tbBirthday";
-            this.tbBirthday.PasswordChar = '*';
             this.tbBirthday.Size = new System.Drawing.Size(336, 38);
             this.tbBirthday.TabIndex = 15;
             // 
@@ -127,6 +125,7 @@
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(417, 264);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(336, 38);
             this.tbPassword.TabIndex = 13;
             // 

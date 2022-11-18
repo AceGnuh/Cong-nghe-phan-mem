@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DAO\Connection.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="DAO\SingupDAO.cs" />
     <Compile Include="DetailForm.cs">
       <SubType>Form</SubType>
     </Compile>

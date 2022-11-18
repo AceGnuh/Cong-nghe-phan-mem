@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DemoMovieApp.DAO;
+
 
 namespace DemoMovieApp
 {
@@ -61,6 +63,17 @@ namespace DemoMovieApp
                 return;
             }
 
+            if(SingupDAO.Instance().insertAcc(name, phone, password, birday, address))
+            {
+                MainForm form2 = new MainForm();
+                this.Hide();
+                form2.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Fail");
+            }
 
         }
     }
