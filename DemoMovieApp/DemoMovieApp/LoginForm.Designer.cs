@@ -98,17 +98,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(314, 350);
+            this.label4.Location = new System.Drawing.Point(347, 347);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Create new account";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1246, 555);
+            this.ClientSize = new System.Drawing.Size(797, 496);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);

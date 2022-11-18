@@ -16,5 +16,10 @@ namespace DemoMovieApp
         {
             InitializeComponent();
         }
+
+        private void ManagementCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

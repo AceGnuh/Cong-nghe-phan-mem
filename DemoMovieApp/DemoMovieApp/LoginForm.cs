@@ -46,5 +46,13 @@ namespace DemoMovieApp
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            SignupForm signupForm = new SignupForm();
+            this.Hide();
+            signupForm.ShowDialog();
+            this.Close();
+        }
     }
 }
