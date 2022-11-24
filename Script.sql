@@ -178,6 +178,7 @@ INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV10', N'Nước ngọt
 INSERT INTO BapNuoc(maDichVu, tenCombo, donGia) VALUES ('DV11', N'Trà sữa đặc biệt', 35000)
 
 INSERT INTO Admin(taiKhoan, matKhau, chucVu) VALUES ('admin', 'admin', N'Quản lí')
+select * from Admin
 
 INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC01', 'PC01R01', 'P01', '2022-11-20', 80000, '21:00');
 INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC02', 'PC02R01', 'P02', '2022-11-20',80000, '20:00')
@@ -190,6 +191,8 @@ INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioC
 INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC09', 'PC01R05', 'P09', '2022-11-20', 80000, '20:00')
 INSERT INTO SuatChieu(maSuatChieu, maPhongChieu, maPhim, ngayChieu, donGia, gioChieu) VALUES ('SC10', 'PC02R05', 'P09', '2022-11-20', 80000, '21:00')
 select * from SuatChieu
+
+
 
 --UPDATE TICH DIEM TRONG BANG KHACH HANG
 -- TINH TONG TIEN
