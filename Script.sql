@@ -194,5 +194,67 @@ select * from SuatChieu
 
 
 
---UPDATE TICH DIEM TRONG BANG KHACH HANG
--- TINH TONG TIEN
+--Viết thủ tục thêm khach hàng
+GO
+CREATE PROCEDURE P_ADD_NEW_User @matkhau  CHAR(10), @tenkhachhang NVARCHAR(100), @sodienthoai VARCHAR(100), @ngaysinh DATE, @diachi NVARCHAR(100), @diemtichluy INT
+AS 
+	BEGIN
+		INSERT INTO KhachHang(matKhau, tenKhachHang, soDienThoai, ngaySinh, diaChi, diemTichLuy) VALUES (@matkhau, @tenkhachhang, @sodienthoai, @ngaysinh, @diachi, @diemtichluy);
+	END
+
+-- Viết thủ tục cho biết TÊN PHIM KHI NHẬP từ bàn 
+--phím. 
+GO
+CREATE PROC P_GET_TENPHIM @MAPHIM CHAR(10) = NULL
+AS
+	BEGIN
+		IF @MAPHIM IS NULL
+			PRINT'MA PHIM KHONG TON TAI'
+		ELSE
+		BEGIN
+			SELECT tenPhim AS 'TEN PHIM'
+			FROM Phim
+			WHERE maPhim = @MAPHIM
+		END
+	END
+--Hàm thống kê số lượng khách hàng online
+go
+CREATE FUNCTION THONGKE_Kh ()
+RETURNS INT
+AS
+	BEGIN
+		RETURN (SELECT COUNT(maKhachHang) FROM KhachHang
+	END
+--Hàm để đếm só lương phòng chiếu của một rạp dựa vào mã rạp
+go
+CREATE FUNCTION DEM_SL(@maRap CHAR(10))
+RETURNS int
+AS
+	BEGIN
+		RETURN (SELECT COUNT(P.maPhongChieu) FROM Rap R, PhongChieu P
+		WHERE R.maRap = @maRap and R.maRap = P.maRap)
+	END
+
+--Trigger để thêm khách hàng tránh nhập vào KETQUA với số điểm tích lũy âm
+go
+CREATE TRIGGER INSERT_TRIGG
+	ON KhachHang
+	FOR INSERT
+	AS
+	IF (SELECT diemTichLuy FROM inserted) < 0 
+	BEGIN
+	PRINT 'DIEM KHONG THE NHO HON 0 VA LON HON 10'
+	ROLLBACK TRAN
+	END
+
+--update trigger để đảm bảo năm trong cột ngay sinh của khachhang nhỏ hơn năm hiên tại
+go
+CREATE TRIGGER UDATE_TRIGGER
+	ON khachHang
+	FOR UPDATE
+	AS
+	BEGIN
+	IF (SELECT YEAR(ngaySinh) FROM inserted ) > YEAR(GETDATE())
+	PRINT('ERROR')
+	ROLLBACK TRAN
+	END
